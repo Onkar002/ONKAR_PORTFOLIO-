@@ -2,96 +2,356 @@
 
 export default function BeliefSection() {
   return (
-    <section className="relative min-h-screen bg-black text-white overflow-hidden">
-      {/* Background Grid */}
+    <section
+      id="belief"
+      className="relative min-h-screen overflow-hidden bg-black text-white"
+    >
+      {/* ================= BACKGROUND GRID ================= */}
       <div
-        className="absolute inset-0 opacity-30"
+        className="pointer-events-none absolute inset-0 opacity-30"
         style={{
           backgroundImage:
             "radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
+          backgroundSize: "clamp(16px, 2vw, 24px) clamp(16px, 2vw, 24px)",
         }}
       />
 
-      {/* Red Border */}
-      <div className="absolute inset-8 border border-red-600/50 pointer-events-none" />
+      {/* ================= RESPONSIVE BORDER ================= */}
+      <div className="pointer-events-none absolute inset-3 sm:inset-5 md:inset-6 lg:inset-8 border border-red-600/40" />
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-8 lg:px-15 py-20">
-        {/* Top Row */}
-        <div className="flex justify-between items-center mb-20">
-          <p className="text-red-500 uppercase tracking-[6px] font-semibold text-sm">
+      {/* ================= CONTENT ================= */}
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          w-full
+          max-w-[1800px]
+          px-6
+          sm:px-8
+          md:px-10
+          lg:px-14
+          xl:px-20
+          2xl:px-24
+          py-16
+          sm:py-20
+          md:py-24
+          lg:py-28
+          xl:py-32
+        "
+      >
+        {/* ================= TOP ROW ================= */}
+        <div
+          className="
+            flex
+            flex-col
+            items-start
+            gap-4
+            sm:flex-row
+            sm:items-center
+            sm:justify-between
+            mb-14
+            sm:mb-16
+            md:mb-20
+            lg:mb-24
+          "
+        >
+          {/* Label */}
+          <p
+            className="
+              uppercase
+              tracking-[4px]
+              sm:tracking-[5px]
+              md:tracking-[6px]
+              font-semibold
+              text-xs
+              sm:text-sm
+              text-red-500
+            "
+          >
             I BELIEVE
           </p>
 
-          <p className="uppercase tracking-[4px] text-[11px] text-gray-500">
-           BUILDING MODERN WEB EXPERIENCES
+          {/* Description */}
+          <p
+            className="
+              uppercase
+              tracking-[2px]
+              sm:tracking-[3px]
+              md:tracking-[4px]
+              text-[9px]
+              sm:text-[10px]
+              md:text-[11px]
+              text-gray-500
+            "
+          >
+            Building Modern Web Experiences
           </p>
         </div>
 
-        {/* Heading */}
+        {/* ================= MAIN HEADING ================= */}
         <div className="relative">
-          {/* Left Quote */}
-          <span className="absolute -left-4 lg:-left-10 top-0 text-[90px] lg:text-[140px] text-gray-700 font-bold leading-none">
+          {/* LEFT QUOTE */}
+          <span
+            className="
+              pointer-events-none
+              absolute
+              -left-3
+              sm:-left-5
+              md:-left-6
+              lg:-left-10
+              -top-5
+              sm:-top-8
+              lg:-top-12
+              select-none
+              font-bold
+              leading-none
+              text-gray-800
+              text-[70px]
+              sm:text-[90px]
+              md:text-[110px]
+              lg:text-[140px]
+              xl:text-[170px]
+            "
+          >
             "
           </span>
 
-          {/* Right Quote */}
-          <span className="absolute right-0 bottom-0 text-[90px] lg:text-[140px] text-gray-700 font-bold leading-none">
+          {/* RIGHT QUOTE */}
+          <span
+            className="
+              pointer-events-none
+              absolute
+              right-0
+              -bottom-10
+              sm:-bottom-14
+              md:-bottom-16
+              lg:-bottom-20
+              select-none
+              font-bold
+              leading-none
+              text-gray-800
+              text-[70px]
+              sm:text-[90px]
+              md:text-[110px]
+              lg:text-[140px]
+              xl:text-[170px]
+            "
+          >
             "
           </span>
 
-          <h1 className="leading-[0.92] font-black uppercase">
-            <span className="block text-5xl md:text-7xl lg:text-[110px]">
-              <span className="text-white">BUILD EXPERIENCES...</span>{" "}
-              <span className="text-gray-500">CREATE IMPACT...</span>
+          {/* HEADING */}
+          <h1
+            className="
+              relative
+              z-10
+              font-black
+              uppercase
+              leading-[0.9]
+              tracking-[-0.04em]
+            "
+          >
+            {/* FIRST LINE */}
+
+            <span
+              className="
+                block
+                text-[11vw]
+                sm:text-[9vw]
+                md:text-[8vw]
+                lg:text-[7vw]
+                xl:text-[6.5vw]
+                2xl:text-[6rem]
+              "
+            >
+              <span className="text-white">
+                BUILD EXPERIENCES...
+              </span>{" "}
+              <span className="text-gray-500">
+                CREATE IMPACT...
+              </span>
             </span>
 
-            <span className="block text-5xl md:text-7xl lg:text-[110px] mt-2">
-              <span className="text-white">Build</span>{" "}
-              <span className="italic font-light normal-case text-gray-300">
+            {/* SECOND LINE */}
+
+            <span
+              className="
+                mt-4
+                sm:mt-5
+                md:mt-6
+                block
+                text-[11vw]
+                sm:text-[9vw]
+                md:text-[8vw]
+                lg:text-[7vw]
+                xl:text-[6.5vw]
+                2xl:text-[6rem]
+              "
+            >
+              <span className="text-white">
+                BUILD
+              </span>{" "}
+              <span
+                className="
+                  italic
+                  font-light
+                  normal-case
+                  text-gray-300
+                "
+              >
                 SOLUTIONS...
               </span>
             </span>
           </h1>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-white/10 my-20" />
+        {/* ================= DIVIDER ================= */}
+        <div
+          className="
+            my-14
+            sm:my-16
+            md:my-20
+            lg:my-24
+            border-t
+            border-white/10
+          "
+        />
 
-        {/* Bottom Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-          {/* Left */}
+        {/* ================= BOTTOM GRID ================= */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            gap-12
+            sm:gap-14
+            md:gap-16
+            lg:grid-cols-3
+            lg:gap-12
+            xl:gap-20
+            2xl:gap-28
+          "
+        >
+          {/* ================= LEFT COLUMN ================= */}
           <div>
-            <p className="text-2xl leading-relaxed text-gray-300">
-              I build modern, scalable web applications that combine clean code,{" "}
-              <span className="italic font-serif text-white">
-               responsive design, and
+            <p
+              className="
+                max-w-xl
+                text-lg
+                sm:text-xl
+                md:text-2xl
+                leading-relaxed
+                text-gray-300
+              "
+            >
+              I build modern, scalable web applications that
+              combine clean code,{" "}
+              <span className="font-serif italic text-white">
+                responsive design,
               </span>{" "}
-              exceptional user experiences.
+              and exceptional user experiences.
             </p>
           </div>
 
-          {/* Center */}
+          {/* ================= CENTER COLUMN ================= */}
           <div>
-            <h3 className="uppercase tracking-[3px] text-xl font-bold mb-8">
+            <h3
+              className="
+                mb-6
+                sm:mb-7
+                md:mb-8
+                text-lg
+                sm:text-xl
+                uppercase
+                tracking-[2px]
+                sm:tracking-[3px]
+                font-bold
+              "
+            >
               Scope & Platform
             </h3>
 
-            <div className="w-full h-px bg-white/10 mb-8" />
+            {/* Divider */}
+            <div className="mb-6 sm:mb-8 h-px w-full bg-white/10" />
 
-            <p className="text-gray-400 leading-8">
-             Focused on modern frontend development, responsive user interfaces,
-REST API integration, reusable components, performance optimization,
-and scalable web applications.
+            <p
+              className="
+                text-sm
+                sm:text-base
+                md:text-lg
+                leading-7
+                sm:leading-8
+                text-gray-400
+              "
+            >
+              Focused on modern frontend development,
+              responsive user interfaces, REST API integration,
+              reusable components, performance optimization,
+              and scalable web applications.
             </p>
 
-            <p className="italic text-red-500 mt-8">
+            <p
+              className="
+                mt-6
+                sm:mt-8
+                text-sm
+                sm:text-base
+                italic
+                text-red-500
+              "
+            >
               Connecting intelligence with real-world software.
             </p>
           </div>
 
-          {/* Right - Empty for balance, or add content here */}
-          <div>{/* Optional third column content */}</div>
+          {/* ================= RIGHT COLUMN ================= */}
+          <div
+            className="
+              hidden
+              lg:block
+              self-end
+            "
+          >
+            <div className="flex flex-col items-end gap-5">
+              <span className="h-px w-24 bg-red-600/60" />
+
+              <p
+                className="
+                  max-w-[220px]
+                  text-right
+                  text-xs
+                  uppercase
+                  tracking-[3px]
+                  leading-6
+                  text-gray-600
+                "
+              >
+                Design.
+                <br />
+                Develop.
+                <br />
+                Deliver.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* ================= MOBILE BOTTOM ================= */}
+        <div className="mt-14 flex lg:hidden items-center gap-4">
+          <div className="h-px flex-1 bg-red-600/40" />
+
+          <span
+            className="
+              text-[9px]
+              sm:text-[10px]
+              uppercase
+              tracking-[3px]
+              text-gray-600
+              whitespace-nowrap
+            "
+          >
+            Design · Develop · Deliver
+          </span>
         </div>
       </div>
     </section>

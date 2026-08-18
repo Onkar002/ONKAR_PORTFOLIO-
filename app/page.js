@@ -40,7 +40,7 @@ export default function Home() {
       <Hero />
       <BeliefSection />
       <ProfessionalStatistics />
-      <IdentitySequence />
+      {/* <IdentitySequence /> */}
       <InfiniteTextSection />
       <StickyCard />
       <PinCards />
